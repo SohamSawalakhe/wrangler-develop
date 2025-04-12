@@ -140,7 +140,7 @@ numberRange
  ;
 
 value
- : String | Number | Column | Bool
+ : String | Number | Column | Bool | BYTE_SIZE | TIME_DURATION
  ;
 
 ecommand
@@ -247,6 +247,11 @@ BackSlash: '\\';
 Dollar   : '$';
 Tilde    : '~';
 
+BYTE_SIZE : Digit+ ('.' Digit+)? BYTE_UNIT;
+TIME_DURATION : Digit+ ('.' Digit+)? TIME_UNIT;
+
+fragment BYTE_UNIT : ('B'|'KB'|'MB'|'GB'|'TB'|'PB') ;
+fragment TIME_UNIT : ('ns'|'ms'|'s'|'m'|'h'|'d') ;
 
 Bool
  : 'true'
