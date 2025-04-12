@@ -1,0 +1,32 @@
+AI Interaction Prompts:
+
+1. Initial Setup and Understanding:
+- "Help me understand the CDAP Wrangler project structure and where to implement byte size and time duration parsers"
+- "What are the key components we need to modify to add new token types?"
+
+2. Grammar Implementation:
+- "How should we define BYTE_SIZE and TIME_DURATION tokens in the ANTLR grammar?"
+- "What are the valid byte size and time duration units we should support?"
+
+3. Token Classes:
+- "Help me implement ByteSizeToken and TimeDurationToken classes"
+- "How should we handle unit conversions and validation?"
+
+4. AggregateStats Directive:
+- "How should we implement the aggregate-stats directive?"
+- "What's the best way to handle aggregation of byte sizes and time durations?"
+
+5. Testing:
+- "Help me write comprehensive tests for the new token types"
+- "How should we test the aggregate-stats directive?"
+
+6. Build and Integration:
+- "Help me resolve Maven build issues"
+- "How do we verify the implementation is working correctly?"
+
+Key Decisions Made:
+1. Supported byte size units: B, KB, MB, GB, TB, PB
+2. Supported time duration units: ns, ms, s, m, h, d
+3. Used canonical units: bytes for size, nanoseconds for time
+4. Implemented comprehensive error handling and validation
+5. Added extensive test coverage for all components 
